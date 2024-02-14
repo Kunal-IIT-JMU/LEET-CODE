@@ -1,4 +1,4 @@
-class Solution {
+class Solution{
 public:
     int kthFactor(int n, int k) {
         int count = 1;

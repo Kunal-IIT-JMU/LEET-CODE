@@ -1,0 +1,22 @@
+class Solution {
+public:
+    int countwords(string s){
+        int ans = 0;
+        for(int i=0 ; i< s.length() ; i++){
+            if(s[i] == ' ' || i == s.length()-1){
+                ans++;
+            }
+        }
+        return ans;
+    }
+    int mostWordsFound(vector<string>& sentences) {
+        int max = INT_MIN;
+        for(int i =0; i< sentences.size(); i++){
+            int temp = countwords(sentences[i]);
+            if(max < temp){
+                max = temp;
+            }
+        }
+        return max;
+    }
+};

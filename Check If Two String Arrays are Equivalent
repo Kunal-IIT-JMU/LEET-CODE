@@ -1,0 +1,20 @@
+class Solution {
+public:
+    string sum(vector<string>& word1){
+        string ans;
+        for(int i =0; i< word1.size(); i++){
+            ans = ans + word1[i];
+        }
+        return ans;
+    }
+    bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
+        string k = sum(word1);
+        string h = sum(word2);
+        if(k == h){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};

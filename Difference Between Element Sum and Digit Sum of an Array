@@ -1,0 +1,26 @@
+class Solution {
+public:
+    int digital_sum(int n){
+        int ans =0;
+        while(n>0){
+            ans = ans + n%10;
+            n = n/10;
+        }
+        return ans;
+    }
+    int element_sum(vector <int> nums){
+        int ans = 0;
+        for(int i =0; i< nums.size(); i++){
+            ans = ans + nums[i];
+        }
+        return ans;
+    }
+    int differenceOfSum(vector<int> nums) {
+        int es = element_sum(nums);
+        int ds = 0;
+        for(int i =0; i<nums.size(); i++){
+            ds = ds + digital_sum(nums[i]);
+        }
+        return abs(ds-es);
+    }
+};

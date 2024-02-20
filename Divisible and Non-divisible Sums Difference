@@ -1,0 +1,21 @@
+static int speedup = []() {
+    ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+    return 0;
+}();
+class Solution {
+public:
+    int differenceOfSums(int n, int m) {
+        int dsum = 0;
+        int ndsum = 0;
+        for(int j =1; j<=n;j++){
+            if(j%m ==0){
+                dsum = dsum + j;
+            }
+            else{
+                ndsum = ndsum + j;
+            }
+        }
+        int nj = ndsum-dsum;
+        return nj;
+    }
+};
